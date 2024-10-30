@@ -10,7 +10,8 @@ app.use(helmet.xssFilter());
 app.use(helmet.noSniff());
 app.use(helmet.ieNoOpen());
 
-
+ninetyDaysInSeconds = 90 * 24 * 60 * 60;
+app.use(helmet.hsts({ maxAge: timeInSeconds, force: true }));
 
 
 
